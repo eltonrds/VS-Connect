@@ -10,6 +10,7 @@ import imgAlfinete from "../../assets/img/alfinete.png";
 import Footer from "../../components/Footer/";
 import Header from "../../components/Header";
 
+import {Link} from "react-router-dom";
 
 function Home() {
 
@@ -25,8 +26,8 @@ function Home() {
                             oportunidades.</p>
                         <p className="banner_slogan_l3">Conecte-se e comece a desvendar esse mundo!</p>
                         <div className="banner_botoes">
-                            <a className="botao banner_botao_dev" href="#">desenvolvedor</a>
-                            <a className="botao banner_botao_cli" href="#">cliente</a>
+                            <Link className="botao banner_botao_dev" to={"#"}>desenvolvedor</Link>
+                            <Link className="botao banner_botao_cli" to={"#"}>cliente</Link>
                         </div>
                     </div>
                 </section>
@@ -43,7 +44,7 @@ function Home() {
                                 <li>procurar por desenvolvedores</li>
                             </ul>
                             <div>
-                                <a className="botao clientes_botao_cli" href="#">criar conta</a>
+                                <Link className="botao clientes_botao_cli" to={"#"}>criar conta</Link>
                             </div>
                         </div>
                     </div>
@@ -57,7 +58,7 @@ function Home() {
                             <li>divulgar suas hardskills</li>
                         </ul>
                         <div>
-                            <a className="botao clientes_botao_devs" href="#">criar conta</a>
+                            <Link className="botao clientes_botao_devs" to={"#"}>criar conta</Link>
                         </div>
                     </div>
                     <img src={imgMaosDev} alt="" />
@@ -80,7 +81,7 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <a href="#">Ver mais serviços</a>
+                    <Link to={"#"}>Ver mais serviços</Link>
                 </section>
             </main>
            
