@@ -4,6 +4,7 @@ footer {
     background-image: 
         linear-gradient( #06082170, #06082170),
         url("../../assets/img/background_footer.png");
+    /* background-color: #060821; */
     background-size: cover;
     color: var(--branco);
 }
@@ -79,8 +80,10 @@ footer {
     min-width: 250px;
 }
 
-.rodape_conteudo_paginas ul {
+.rodape_conteudo_paginas ul a {
     font-family: var(--font2);
+    color: var(--branco);
+    text-decoration: none;
     font-size: 18px;
 }
 
