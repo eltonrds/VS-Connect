@@ -21,8 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>{/*Indica uma lista de rotas*/}
         <Route path='/' element={<Home />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
         <Route path='lista/servicos' element={<ListaServicos />} />
-
         <Route path='lista/devs' element={<ListaDevs />} />
+        <Route path='/l'/>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -33,7 +33,7 @@ function Footer() {
                         <h2>Páginas</h2>
                         <ul>
                             <li>
-                                <Link to={"#"}>Login</Link>
+                                <Link to={"/l"}>Login</Link>
                             </li>
                             <li>
                                 <Link to={"/"}>Home</Link>
