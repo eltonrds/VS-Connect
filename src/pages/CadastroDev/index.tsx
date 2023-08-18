@@ -1,6 +1,8 @@
 import "./style.css";
 
 function cadastroDev() {
+
+    
     return (
         <>
             <main id="main_cadastrodevs" className="main_cadastro">
@@ -27,7 +29,7 @@ function cadastroDev() {
 
                                     <div className="cad_box_input">
                                         <label htmlFor="cep">Cep:</label>
-                                        <input type="text" id="cep" maxLength="9" onkeyup="mascaraCep(event)"
+                                        <input type="text" id="cep" maxLength={9} onKeyUp={mascaraCep}
                                             placeholder="Digite aqui seu Cep:" />
                                     </div>
 
