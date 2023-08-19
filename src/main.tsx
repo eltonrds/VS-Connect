@@ -7,6 +7,8 @@ import ListaServicos from "./pages/ListaServicos/";
 import ListaDevs from "./pages/ListaDevs";
 import Footer from "./components/Footer"
 import Header from './components/Header';
+import Perfil from './pages/PerfilUsuario';
+import Login from './pages/Login';
 
 //estilização global
 import "./index.css";
@@ -22,7 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<Home />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
         <Route path='lista/servicos' element={<ListaServicos />} />
         <Route path='lista/devs' element={<ListaDevs />} />
-        <Route path='/l'/>
+        <Route path='/'/>
+        <Route path='perfil/:idUsuario'element={<Perfil />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -54,3 +54,7 @@
     background-color: white;
     color: var(--azulP);
 }
+.dev a{
+    text-decoration: none;
+    color: white;
+}
