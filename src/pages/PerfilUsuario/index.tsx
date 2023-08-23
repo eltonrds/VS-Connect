@@ -6,11 +6,14 @@ import { useEffect, useState } from "react";
 
 //estilização
 import "./style.css";
+
+//axios
 import api from "../../utils/api";
 
 
+
 function PerfilUsuario() {
-        //para indentificar o usuario 1, 2, 3, 4 ...
+
     const { idUsuario } = useParams();
 
     const [nome, setNome] = useState<string>("");
@@ -20,40 +23,40 @@ function PerfilUsuario() {
     const [cidade, setCidade] = useState<string>("");
     const [listaSkills, setListaSkills] = useState<string[]>([]);
 
-    function buscarUsuarioPorID() {
 
-        //estrutura basica para concumir API
+    function buscarUsuarioPorID() {
+        //estrutura basica para consumir API
         api.get("users/" + idUsuario)
-        .then((response: any) =>{
-            console.log(response); 
-             
-            setNome(response.data.nome);
+            .then((response: any) => {
+                console.log(response);
+
+                //seta os valores referente as informações do usuario
+                setNome(response.data.nome);
                 setFoto(response.data.user_img);
                 setEmail(response.data.email);
                 setCidade(response.data.cidade);
                 setUf(response.data.uf);
                 setListaSkills(response.data.hardSkills);
-        })
-        .catch((error:any) =>{
-            console.log("Erro ao realizar um requisicao: ", error);                
-        })         
+
+            })
+            .catch((error: any) => console.log(error))
+
     }
 
     useEffect(() => {
-        //executa acao apos o componente
         buscarUsuarioPorID();
-    }, [])
+    }, []);
 
     return (
         <main id="main_perfilusuario">
             <div className="container container_perfil_dev">
                 <div className="perfil_dev_conteudo">
-                <h1>Página de Perfil -{nome}</h1>
+                    <h1>Página de Perfil - {nome}</h1>
 
                     <div className="topo_dev">
-                        <img 
-                            src={"http://localhost:3000/static/" + foto} 
-                            alt={"Foto de perfil de " + nome} 
+                        <img
+                            src={"http://localhost:3000/static/" + foto}
+                            alt={"Foto de perfil de " + nome}
                         />
                         <h2>{nome}</h2>
                     </div>
@@ -61,9 +64,9 @@ function PerfilUsuario() {
                     <div className="contato_local">
                         <div className="contato">
                             <p>Email para contato: </p>
-                            <Link to={email}>{email}</Link>
+                            <Link to={"mailto:" + email}>{email}</Link>
                         </div>
-                        <div className="local"> 
+                        <div className="local">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 384 512">
@@ -77,16 +80,13 @@ function PerfilUsuario() {
                     </div>
 
                     <div className="techs">
-                        <p>Tecnologias principais:  </p>
+                        <p>Tecnologias principais: </p>
                         <div className="lista_skills">
                             {
-                                listaSkills.map((tech: string, index: number) =>{
+                                listaSkills.map((tech: string, index: number) => {
                                     return <span key={index}>{tech}</span>
                                 })
                             }
-                            {/* <span>HTML</span>
-                            <span>CSS</span>
-                            <span>React</span> */}
                         </div>
                     </div>
                     <footer>

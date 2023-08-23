@@ -33,7 +33,7 @@ function Footer() {
                         <h2>Páginas</h2>
                         <ul>
                             <li>
-                                <Link to={"/l"}>Login</Link>
+                                <Link to={"login"}>Login</Link>
                             </li>
                             <li>
                                 <Link to={"/"}>Home</Link>
@@ -45,10 +45,13 @@ function Footer() {
                                 <Link to={"lista/devs"}>Listar Desenvolvedores</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Cliente</Link>
+                                <Link to={"cadastro/usuario"}>Cadastrar Cliente</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Desenvolvedor</Link>
+                                <Link to={"cadastro/usuario"}>Cadastrar Desenvolvedor</Link>
+                            </li>
+                            <li>
+                                <Link to={"cadastro/servicos"}>Cadastrar Servicos</Link>
                             </li>
                         </ul>
                     </div>

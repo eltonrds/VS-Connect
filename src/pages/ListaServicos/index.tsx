@@ -92,6 +92,7 @@ function ListaServicos() {
                                             nome={servico.nome}
                                             descricao={servico.descricao}
                                             techs={servico.techs}
+                                            id={servico.id}
                                         />
                                     </li>
                                 })

@@ -1,10 +1,14 @@
 //estilização
+import { Link} from "react-router-dom";
 import "./style.css";
 
+
 function CardServico(props: any) {
+    
+
     return <div className="servico">
         <div className="topo_servico">
-            <h3>{props.nome}</h3>
+            <Link to={"/VisualizarServico/" + props.id}><h3>{props.nome}</h3></Link>   
             <span>R$ {props.valor}</span>
         </div>
         <p>{props.descricao}</p>
