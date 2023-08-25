@@ -16,7 +16,7 @@ function Footer() {
 
     return (
         //codigo do footer
-        <footer className={location.pathname == "/" ? "footer_background_image" : "footer_background_color"}>
+        <footer id="footer" className={location.pathname == "/" ? "footer_background_image" : "footer_background_color"}>
             <div className="container rodape">
                 {
                     location.pathname == "/" ? <div className="span_dicas">

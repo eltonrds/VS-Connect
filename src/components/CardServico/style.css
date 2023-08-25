@@ -14,6 +14,8 @@
 .topo_servico {
     width: 100%;
 
+    
+
     margin-bottom: 30px;
 
     display: flex;
@@ -22,8 +24,15 @@
     font-size: 20px;
 }
 
+.servico h3,p, a { 
+    text-decoration: none;
+    color: white;
+}
+
+
 .topo_servico h3 {
     width: 65%;
+    
 }
 
 .servico p {

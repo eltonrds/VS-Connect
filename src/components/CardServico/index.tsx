@@ -8,7 +8,7 @@ function CardServico(props: any) {
 
     return <div className="servico">
         <div className="topo_servico">
-            <Link to={"/VisualizarServico/" + props.id}><h3>{props.nome}</h3></Link>   
+            <Link to={"/visualizar/servicos/" + props.id}><h3>{props.nome}</h3></Link>   
             <span>R$ {props.valor}</span>
         </div>
         <p>{props.descricao}</p>
