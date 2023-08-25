@@ -1,12 +1,18 @@
 
 /* FOOTER */
-footer {
-    background-image: 
-        linear-gradient( #06082170, #06082170),
-        url("../../assets/img/background_footer.png");
-    /* background-color: #060821; */
+#footer {
     background-size: cover;
     color: var(--branco);
+}
+
+.footer_background_image {
+    background-image:
+        linear-gradient(#06082170, #06082170),
+        url("../../assets/img/background_footer.png");
+}
+
+.footer_background_color {
+    background-color: var(--azulP);
 }
 
 .rodape {

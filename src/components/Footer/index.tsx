@@ -9,10 +9,13 @@ import iconLinkedin from "../../assets/img/linkedin.svg";
 import "./style.css";
 
 //rotas
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+
 
 function Footer() {
 
+    const location = useLocation();
 
     return (
         //codigo do footer

@@ -22,8 +22,7 @@ function VisualizarServico() {
                 </div>
             </div>
 
-        </main>
-    );
+        </main>);
 }
 
 export default VisualizarServico;
